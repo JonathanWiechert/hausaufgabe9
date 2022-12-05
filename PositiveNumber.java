@@ -4,6 +4,7 @@ public class PositiveNumber {
 	//Attribut
 	private int value;
 	public void setHexadecimal(String s) {
+		this.value=0;//löschen der aktuellen Wert von Value
 		s.toLowerCase();//nehmen nur kleines Charakter nehmen
 		int length=s.length()-1,num;//Index
 		for (int i=0;i<=length;i++) {

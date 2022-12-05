@@ -8,8 +8,7 @@ public class test {
 		zs.setHexadecimal("affe");
 		System.out.println("Dezimal: " + zs.getDecimal());
 		zs.setBinary("1000101011");
-		System.out.println("Hexadezimal: " + zs.getHexadecimal());
-		System.out.println();;		
+		System.out.println("Hexadezimal: " + zs.getHexadecimal());		
 		}
 
 }

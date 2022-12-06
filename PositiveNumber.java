@@ -62,7 +62,15 @@ public class PositiveNumber {
 	
 		
 	public void setDecimal(String s) {
-		this.value = Integer.parseInt(s); //wirft automatisch eine NumberFormatException, falls Buchstaben im String enthalten sind
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+				continue;
+			}
+			else {
+				throw new NumberFormatException("Nur Zahlen erlaubt!");
+			}
+		}
+		this.value = Integer.parseInt(s);
 		if (value < 0 || value > Integer.MAX_VALUE) {
 			throw new ArithmeticException("Keine negativen Zahlen!");
 		}

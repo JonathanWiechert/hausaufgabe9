@@ -60,5 +60,44 @@ public class PositiveNumber {
 			return res;
 		}
 	
+		
+	public void setDecimal(String s) {
+		this.value = Integer.parseInt(s);
+		if (value < 0 || value > Integer.MAX_VALUE) {
+			throw new ArithmeticException("Keine negativen Zahlen!");
+		}
+	}
+	
+	public String getDecimal() {
+		//Hexadezimal in Dezimal
+		String s = "affe";
+		int summe = 0;
+		int i = s.length() - 1;
+		
+		for(int j = 0; j < s.length(); j++) {
+			if (s.charAt(j) >= '0' && s.charAt(j) <= '9') {
+				summe += (s.charAt(j) - 48) * Math.pow(16, i);
+			}
+			else if (s.charAt(j) >= 'A' && s.charAt(j) <= 'F') {
+				summe += (s.charAt(j) - 55) * Math.pow(16, i);
+			}
+			else if (s.charAt(j) >= 'a' && s.charAt(j) <= 'f') {
+				summe += (s.charAt(j) - 87) * Math.pow(16, i);
+			}
+			i--;
+		}
+		return String.valueOf(summe);
+		
+		
+		//Binär in Dezimal
+//		String s = "1000101011";
+//		int summe = 0;
+//		int i = s.length() - 1;
+//		for (int j = 0; j < s.length(); j++) {
+//			summe += (s.charAt(j) - 48) * Math.pow(2, i);
+//			i--;
+//		}
+//		return String.valueOf(summe);
+	}	
 	}
 }

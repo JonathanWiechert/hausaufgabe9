@@ -60,4 +60,5 @@ public class PositiveNumber {
 			return res;
 		}
 	
+	}
 }
